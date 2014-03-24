@@ -5,7 +5,7 @@
 ;; Author: Sébastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
 ;; Keywords: emacs, 
 ;; Created: 2014-03-21
-;; Last changed: 2014-03-21 23:17:13
+;; Last changed: 2014-03-25 00:26:27
 ;; Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
 
 ;; This file is NOT part of GNU Emacs.
@@ -16,6 +16,7 @@
 
 ;;; Code:
 
+;;;###autoload
 (defconst tango-colors-alist
   '((butter-1 "#fce94f")
     (butter-2 "#edd400")
@@ -45,6 +46,7 @@
     (aluminium-5 "#555753")
     (aluminium-6 "#2e3436")))
 
+;;;###autoload
 (loop for i in tango-colors-alist
       do (set-variable (intern (format "tc:%s" (car i))) (cadr i)))
 
